@@ -1,0 +1,188 @@
+<!--
+Emma Coyle
+CSE383
+Fall 19
+Form Validation Assignment
+
+Using JS, Validate the user's fields in the previous Bootstrap Form Assignment
+-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="formStyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="formJS.js"></script>
+
+    <!-- ********************************************************* -->
+    <!-- ********************* Begin HTML/CSS ******************** -->
+    <!-- ********************************************************* -->
+
+
+    <title>Student InformationForm</title>
+</head>
+
+<body onload="showDateTime()">
+    <container>
+        <form name="studentInfoForm" id="studentInfoForm" action="form1.php" onsubmit="return formValidate()" method="post">
+
+            <div>
+                <h1>
+                    Student Information Form
+                </h1>
+            </div>
+
+            <!-- ********************************************************* -->
+            <!-- *********************** Unique ID *********************** -->
+            <!-- ********************************************************* -->
+            <div class="row">
+                <div>
+                    <label class="mainLabel">Your Unique ID</label>
+                </div>
+                <div>
+                    <input name="uid" id="uid" type="text" placeholder="Unique ID">
+                </div>
+                <div>
+                    <sup>This is your Miami ID</sup>
+                </div>
+            </div>
+
+            <!-- ********************************************************* -->
+            <!-- ********************** Birth Year *********************** -->
+            <!-- ********************************************************* -->
+            <div class="row">
+                <div>
+                    <label class="mainLabel">Birth Year</label>
+                </div>
+                <div>
+                    <input name="birthYear" id="birthYear" placeholder="1970">
+                </div>
+                <div>
+                    <sup>Your 4 digit birth year</sup>
+                </div>
+            </div>
+
+            <!-- ********************************************************* -->
+            <!-- ******************** Graduation Year ******************** -->
+            <!-- ********************************************************* -->
+            <div class="row">
+                <div>
+                    <label class="mainLabel">Graduation Year</label>
+                </div>
+                <div>
+                    <input name="gradYear" id="gradYear" size="30px" type="radio" value="2019" checked>2019</label>
+                    <label>
+                        <input name="gradYear" id="gradYear" size="30px" type="radio" value="2020">2020</label>
+                    <label>
+                        <input name="gradYear" id="gradYear" size="30px" type="radio" value="2021">2021</label>
+                    <label>
+                        <input name="gradYear" id="gradYear" size="30px" type="radio" value="2022">2022</label>
+                    <label>
+                        <input name="gradYear" id="gradYear" size="30px" type="radio" value="2023">2023</label>
+                    <label>
+                        <input name="gradYear" id="gradYear" size="30px" type="radio" value="2024">2024</label>
+                    <label>
+                        <input name="gradYear" id="gradYear" size="30px" type="radio" value="2025">Other</label>
+                </div>
+            </div>
+
+            <!-- ********************************************************* -->
+            <!-- *********************** CSE Major *********************** -->
+            <!-- ********************************************************* -->
+            <div class="row">
+                <div>
+                    <label class="mainLabel">Check if you are a CSE major</label>
+                </div>
+                <div>
+                    <input name="cse" id="cse" type="checkbox" class="largerCheckbox">
+                    <label>Yes</label>
+                </div>
+            </div>
+
+            <!-- ********************************************************* -->
+            <!-- *********************** Car Owner *********************** -->
+            <!-- ********************************************************* -->
+            <div class="row">
+                <div>
+                    <label class="mainLabel">Check if you own a car</label>
+                </div>
+                <div>
+                    <input name="car" id="car" type="checkbox" class="largerCheckbox">
+                    <label>Yes</label>
+                </div>
+            </div>
+
+            <!-- ********************************************************* -->
+            <!-- ****************** Mobile Device Count ****************** -->
+            <!-- ********************************************************* -->
+            <div class="row">
+                <div>
+                    <label class="mainLabel">How many mobile devices do you own?</label>
+                </div>
+                <div>
+                    <input name="mobileDevices" id="mobileDevices" type="text" placeholder="0">
+                </div>
+                <div>
+                    <sup>Include phones, tablets, etc</sup>
+                </div>
+            </div>
+
+            <!-- ********************************************************* -->
+            <!-- ***********************   Quote   *********************** -->
+            <!-- ********************************************************* -->
+            <div class="row">
+                <div>
+                    <label class="mainLabel">Quote</label>
+                </div>
+                <div>
+                    <textarea name="quote" id="quote" rows="4"></textarea>
+                </div>
+
+                <!-- ********************************************************* -->
+                <!-- ********************** Quote-Cite *********************** -->
+                <!-- ********************************************************* -->
+                <div>
+                    <div>
+                        <label class="mainLabel">Source</label>
+                    </div>
+                    <div>
+                        <input name="quoteCite" id="quoteCite" type="text">
+                    </div>
+                    <div>
+                        <sup>A quote you like including who said it</sup>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ********************************************************* -->
+            <!-- *********************** Submit Btn ********************** -->
+            <!-- ********************************************************* -->
+            <div class="row">
+                <div>
+                    <input button type="submit" value="submit">
+                </div>
+            </div>
+
+            <input type="hidden" name="cmd" value="submit">
+
+    </container>
+    </form>
+    </div>
+    <br>
+    <br>
+    <label id="dateTime"></label>
+    <br>
+    <br>
+    <br>
+</body>
+
+</html>
